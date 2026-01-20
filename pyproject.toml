@@ -1,0 +1,23 @@
+[project]
+name = "code-example"
+version = "0.1.0"
+requires-python = ">=3.13"
+
+[tool.pytest.ini_options]
+
+# Browser and playwright settings
+addopts = "--headed --browser=chromium --base-url=https://qa-practice.netlify.app/bugs-form"
+
+# Where tests live
+testpaths = [
+    "tests"
+]
+
+# BDD feature discovery
+bdd_features_base_dir = "tests/features"
+
+# Warning handling
+filterwarnings = [
+    "ignore:'maxsplit' is passed as positional argument:DeprecationWarning"
+]
+
